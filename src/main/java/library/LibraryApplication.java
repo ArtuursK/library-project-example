@@ -11,18 +11,14 @@ public class LibraryApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/ui/main/main.fxml"));
+        Parent rootScene = FXMLLoader.load(getClass().getResource("/ui/main/main.fxml"));
         primaryStage.setTitle("Library");
-        primaryStage.setScene(new Scene(root));
+        primaryStage.setScene(new Scene(rootScene));
         primaryStage.show();
     }
 
     public static void main(String[] args) {
-
         DbSessionHolder.getInstance();
-
-
-
         launch(args);
         DbSessionHolder.shutdown();
     }

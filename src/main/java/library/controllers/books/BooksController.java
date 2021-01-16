@@ -19,7 +19,8 @@ public class BooksController implements Initializable {
 
     private final BookRepository bookRepository = new BookRepository();
 
-    @FXML private TableView<Book> table;
+    @FXML
+    private TableView<Book> table;
 
     @FXML
     private void addBook(ActionEvent event) {
