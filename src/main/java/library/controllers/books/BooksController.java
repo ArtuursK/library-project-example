@@ -30,6 +30,16 @@ public class BooksController implements Initializable {
     }
 
     @FXML
+    private void deleteBook(ActionEvent event) {
+        Book book = table.getSelectionModel().getSelectedItem();
+        if (book == null) {
+            return;
+        }
+        bookRepository.delete(book.getId());
+        populateTable();
+    }
+
+    @FXML
     private void editBook(ActionEvent event) {
         Book book = table.getSelectionModel().getSelectedItem();
         if (book == null) {
@@ -57,6 +67,7 @@ public class BooksController implements Initializable {
         TableColumn<Book, String> column3 = new TableColumn<>("Description");
         column3.setCellValueFactory(new PropertyValueFactory<>("description"));
 
+        //this will call getAuthorFullName() from Book class instance
         TableColumn<Book, String> column4 = new TableColumn<>("Author");
         column4.setCellValueFactory(new PropertyValueFactory<>("authorFullName"));
 
