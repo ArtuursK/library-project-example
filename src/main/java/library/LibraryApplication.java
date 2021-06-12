@@ -20,9 +20,6 @@ public class LibraryApplication extends Application {
     public static void main(String[] args) {
 
         DbSessionHolder.getInstance();
-
-
-
         launch(args);
         DbSessionHolder.shutdown();
     }
