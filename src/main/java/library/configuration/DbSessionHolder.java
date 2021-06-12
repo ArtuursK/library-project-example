@@ -72,6 +72,14 @@ public class DbSessionHolder {
         properties.put(Environment.USER, DB_USERNAME);
         properties.put(Environment.PASS, DB_PASSWORD);
         properties.put(Environment.DIALECT, DB_DIALECT);
+
+        properties.put(Environment.C3P0_ACQUIRE_INCREMENT, 1);
+        properties.put(Environment.C3P0_IDLE_TEST_PERIOD, 3000);
+        properties.put(Environment.C3P0_MIN_SIZE, 10);
+        properties.put(Environment.C3P0_MAX_SIZE, 20);
+        properties.put(Environment.C3P0_MAX_STATEMENTS, 50);
+        properties.put(Environment.C3P0_TIMEOUT, 1800);
+
         properties.put(Environment.SHOW_SQL, "true");
         properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
         properties.put(Environment.HBM2DDL_AUTO, HBM2DDL_AUTO);

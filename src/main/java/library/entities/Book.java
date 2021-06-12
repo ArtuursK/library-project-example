@@ -68,4 +68,8 @@ public class Book {
     public void setAuthor(Author author) {
         this.author = author;
     }
+
+    public String getAuthorFullName() {
+        return getAuthor().getFullName();
+    }
 }

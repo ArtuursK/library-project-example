@@ -12,7 +12,8 @@ import javafx.scene.layout.Pane;
 
 public class MainController implements Initializable {
 
-    @FXML private BorderPane content;
+    @FXML
+    private BorderPane content;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
